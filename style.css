@@ -10,10 +10,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: transparent;
 }
 
 .navbar {
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,34 +21,41 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     padding: 30px;
-    z-index: 100;
-    background: transparent;
+    z-index: 1000;
+
 }
 
 .nav-link {
+    align-items: center;
+    text-align: center;
     background: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
 }
 
 .nav-link:hover {
+    background: transparent;
     text-decoration: underline;
 }
 
 .left {
     justify-content: flex-start;
+    margin-left: 2rem;
 }
 
 .center {
     position: absolute;
     left: 50%;
+    margin-left: 2rem;
     transform: translateX(-50%);
 }
 
 .right {
     justify-content: flex-end;
+    margin-right: 2rem;
 }
 
 .container {
@@ -56,11 +63,12 @@ body {
 }
 h1 {
     text-transform: uppercase;
-    font-size: 10.5rem;
+    font-size: 10rem;
     font-weight: 400;
     letter-spacing: -4px;
 }
 section.hero {
+    margin-top: -6.3rem;
     width: 100vw;
     height: 100vh;
     background: url(images/videogames.webp) no-repeat 50% 50%;
@@ -70,13 +78,13 @@ section.hero {
     align-items: center;
 }
 .hero h1 {
-    font-size: 10.5rem;
+    font-size: 9.5rem;
     font-family: "PP Editorial Old";
     color: #ffffff;
 }
 section.info {
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     background-color: #000;
     color: #fff;
 }
@@ -107,23 +115,35 @@ section.info {
     background-color: #000;
     color: #fff;
 }
+
 .header-info p {
     padding: 1em;
     font-family: "PP Editorial Old";
     font-size: 3.3rem;
     font-weight: lighter;
 }
+
 .header-images {
-    width: 100%;
-    height: 250px;
-    padding: 1em;
     display: flex;
     gap: 1em;
+    padding: 1em;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas si es necesario */
+    max-width: 100%;
 }
+
 .img {
+    flex: 1 1 calc(25% - 1em); /* Cada imagen ocupará un 25% del ancho, menos el espacio entre ellas */
+    height: auto; /* Mantiene la proporción de la imagen */
+    overflow: hidden;
+}
+
+.img img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Asegura que la imagen se escale para llenar el espacio sin distorsionarse */
 }
+
 .pinned {
     position: absolute;
     top: 100vh;
