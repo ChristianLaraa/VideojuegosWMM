@@ -31,9 +31,10 @@ body {
     align-items: center;
     text-align: center;
     background: transparent;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 119, 0);
     text-decoration: none;
     font-size: 18px;
+    letter-spacing: 1.1px;
 }
 
 .nav-link:hover {
@@ -49,7 +50,7 @@ body {
 .center {
     position: absolute;
     left: 50%;
-    margin-left: 2rem;
+    margin-left: 0rem;
     transform: translateX(-50%);
 }
 
@@ -193,9 +194,43 @@ section.website-content {
     z-index: 10;
 }
 .website-content h1{
+    color: rgb(250, 70, 4);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Novecento WideBold" sans-serif;
     font-size: 72px;
-    letter-spacing: 0;
+    margin: 0 15px;
 }
+/* Estilos para la segunda sección */
+.second-section {
+    width: 100%;
+    height: 200vh;
+    background-color: #000; /* Fondo negro para mantener la estética */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(50px); /* Desplazamiento inicial */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición suave */
+}
+
+.second-section h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 72px;
+    font-family: "Novecento WideBold" sans-serif;
+}
+
+.second-section p {
+    font-size: 2rem;
+    font-family: "PP Editorial Old", serif;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 /*LENIS*/
 html.lenis,
 html.lenis body {
