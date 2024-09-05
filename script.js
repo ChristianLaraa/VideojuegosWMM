@@ -67,7 +67,6 @@ ScrollTrigger.create({
     },
 });
 
-// Animación de desplazamiento horizontal en la clase .revealer
 ScrollTrigger.create({
     trigger: ".header-info",
     start: "top top",

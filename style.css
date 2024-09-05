@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #000;
 }
 
 .navbar {
@@ -31,10 +32,15 @@ body {
     align-items: center;
     text-align: center;
     background: transparent;
-    color: rgb(255, 119, 0);
+    color: rgb(250, 70, 1);
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 1.1px;
+}
+.nav-link:hover {
+    color: royalblue;
+    background: transparent;
+    text-decoration: underline;
 }
 
 .nav-link:hover {
@@ -86,14 +92,17 @@ section.hero {
 section.info {
     width: 100vw;
     height: 100vh;
+    letter-spacing: 1px;
     background-color: #000;
     color: #fff;
 }
 
 .header-row {
+    margin-top: 1.5rem;
     width: 100%;
-    height: 250px;
+    height: 290px;
     padding: 0 2em;
+    padding: auto;
 }
 
 .header-row:nth-child(1){
@@ -118,6 +127,7 @@ section.info {
 }
 
 .header-info p {
+    text-align: center;
     padding: 1em;
     font-family: "PP Editorial Old";
     font-size: 3.3rem;
@@ -197,8 +207,22 @@ section.website-content {
     color: rgb(250, 70, 4);
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 3px;
     font-family: "Novecento WideBold" sans-serif;
     font-size: 72px;
+    margin: 0 15px;
+    margin-bottom: 2rem;
+}
+.website-content h1:hover {
+    transform: scale(1.02);
+    transition: transform 0.9s;
+}
+.website-content p{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: "Novecento WideBold" sans-serif;
+    font-size: 35px;
     margin: 0 15px;
 }
 /* Estilos para la segunda sección */
@@ -215,9 +239,10 @@ section.website-content {
     transform: translateY(50px); /* Desplazamiento inicial */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición suave */
 }
-
 .second-section h2 {
     color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
     font-size: 72px;
@@ -225,10 +250,13 @@ section.website-content {
 }
 
 .second-section p {
-    font-size: 2rem;
+    color: rgb(250, 70, 4);
+    font-size: 35px;
     font-family: "PP Editorial Old", serif;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 30px;
+    gap: 10px;
 }
 
 /*LENIS*/
