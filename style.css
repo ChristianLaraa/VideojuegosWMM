@@ -209,7 +209,7 @@ section.website-content {
     text-align: center;
     letter-spacing: 3px;
     font-family: "Novecento WideBold" sans-serif;
-    font-size: 72px;
+    font-size: 65px;
     margin: 0 15px;
     margin-bottom: 2rem;
 }
@@ -222,9 +222,49 @@ section.website-content {
     text-align: center;
     letter-spacing: 1px;
     font-family: "Novecento WideBold" sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     margin: 0 15px;
 }
+.gallery-container {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.image-slider img {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
 /* Estilos para la segunda sección */
 .second-section {
     width: 100%;
@@ -251,14 +291,18 @@ section.website-content {
 
 .second-section p {
     color: rgb(250, 70, 4);
-    font-size: 35px;
+    font-size: 28px;
     font-family: "PP Editorial Old", serif;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 30px;
     gap: 10px;
 }
-
+.spotify {
+    margin-top: 3rem;
+    width: 70%;
+    height: 24%;
+}
 /*LENIS*/
 html.lenis,
 html.lenis body {

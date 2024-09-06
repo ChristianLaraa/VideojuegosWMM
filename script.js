@@ -143,3 +143,45 @@ ScrollTrigger.create({
         });
     }
 });
+let slideIndex = 0;
+let slides = document.querySelectorAll('.image-slider img');
+let totalSlides = slides.length;
+let interval;
+
+function showSlide(index) {
+    const slider = document.querySelector('.image-slider');
+    if (index >= totalSlides) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+    } else {
+        slideIndex = index;
+    }
+    slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(slideIndex - 1);
+}
+
+function autoSlide() {
+    interval = setInterval(() => {
+        nextSlide();
+    }, 3000); // Cambia cada 3 segundos
+}
+
+function stopAutoSlide() {
+    clearInterval(interval);
+}
+
+// Iniciar el desplazamiento automático al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    autoSlide();
+    // Detener el desplazamiento automático al interactuar manualmente
+    document.querySelector('.next-btn').addEventListener('click', stopAutoSlide);
+    document.querySelector('.prev-btn').addEventListener('click', stopAutoSlide);
+});
