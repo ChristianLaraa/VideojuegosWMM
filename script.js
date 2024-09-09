@@ -185,3 +185,61 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.next-btn').addEventListener('click', stopAutoSlide);
     document.querySelector('.prev-btn').addEventListener('click', stopAutoSlide);
 });
+// Inicializamos GSAP y ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".new-section", {
+  scrollTrigger: {
+    trigger: ".new-section",
+    start: "top 80%", // Inicia la animación cuando la sección esté un 80% visible
+    toggleActions: "play none none reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1, // Duración de la animación
+  ease: "power2.out"
+});
+
+const carouselSlide = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-slide img');
+
+let currentIndex = 0;
+const totalImages = images.length;
+const intervalTime = 3000; // Tiempo de intervalo para el desplazamiento automático (3 segundos)
+
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+// Función para actualizar el desplazamiento del carrusel
+function updateCarousel() {
+    carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Mostrar la siguiente imagen
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+    resetAutoSlide();
+});
+
+// Mostrar la imagen anterior
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateCarousel();
+    resetAutoSlide();
+});
+
+// Función para el desplazamiento automático
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+}
+
+// Iniciar desplazamiento automático
+let slideInterval = setInterval(autoSlide, intervalTime);
+
+// Reiniciar el intervalo del auto slide al hacer clic en los botones
+function resetAutoSlide() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(autoSlide, intervalTime);
+}

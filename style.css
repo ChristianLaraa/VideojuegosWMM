@@ -217,7 +217,7 @@ section.website-content {
 }
 .website-content h1:hover {
     transform: scale(1.02);
-    transition: transform 0.9s;
+    transition: 0.9s;
 }
 .website-content p{
     color: rgb(0, 0, 0);
@@ -226,8 +226,16 @@ section.website-content {
     font-family: "Montserrat", sans-serif;
     font-size: 21px;
     line-height: 2.5rem;
-    padding: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
     margin: 0 15px;
+}
+.website-content p:hover {
+    transform: scale(1.035);
+}
+.website-content p:active {
+    transform: scale(0.95);
 }
 .website-content b{
     color: rgb(250, 70, 4);
@@ -315,7 +323,7 @@ section.website-content {
 /* Estilos para la segunda sección */
 .second-section {
     width: 100%;
-    height: 750vh;
+    height: 950vh;
     background-color: #000; /* Fondo negro para mantener la estética */
     color: #fff; /* Texto blanco */
     display: flex;
@@ -340,8 +348,8 @@ section.website-content {
     margin-bottom: 2rem;
 }
 .second-section h2:hover {
-    transform: scale(1.02);
-    transition: transform 0.9s;
+    transform: scale(1.05);
+    transition: transform 0.92s;
 }
 .second-section p {
     color: rgb(255, 255, 255);
@@ -353,8 +361,16 @@ section.website-content {
     margin-top: 2rem;
     margin-bottom: 30px;
     gap: 10px;
-    padding: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 15px;
     margin: 0 15px;
+}
+.second-section p:hover {
+    transform: scale(1.035);
+}
+.second-section p:active {
+    transform: scale(0.95)
 }
 .second-section b {
     color: rgb(250, 70, 4);
@@ -385,6 +401,66 @@ section.website-content {
     width: 70%;
     height: 15%;
 }
+.creadores {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre las imágenes */
+    align-items: center; /* Alinea verticalmente las imágenes */
+}
+
+.creadores img {
+    width: 100%; /* Para que las imágenes ocupen el mismo tamaño */
+    max-width: 600px; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    padding: 10px;
+}
+
+
+
+
+.new-section {
+    padding: 50px 20px; /* Reducí el padding para mejor ajuste en pantallas pequeñas */
+    height: 100vh; /* Tamaño de la pantalla */
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alineación vertical centrada */
+    align-items: center; /* Alineación horizontal centrada */
+}
+
+.new-section h1 {
+    color: rgb(250, 70, 4);
+    letter-spacing: 3px;
+    align-items: center;
+    margin-top: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 58px;
+    line-height: 5rem;
+    font-family: "Novecento WideBold" sans-serif;
+    margin: 0 15px;
+    margin-bottom: 2rem;
+}
+
+.new-section p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    line-height: 2.5rem;
+    transition: transform 0.3s ease;
+    padding: 15px;
+}
+.new-section p.info{
+    margin-top: 4rem;
+    font-size: 14px;
+}
+.soundtrack {
+    margin-top: 3rem;
+}
+
 /*LENIS*/
 html.lenis,
 html.lenis body {
@@ -401,4 +477,51 @@ html.lenis body {
 }
 .lenis.lenis-smooth iframe {
     pointer-events: none;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 700px; /* Tamaño ajustado a 500px */
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: auto; /* Centra horizontalmente */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
